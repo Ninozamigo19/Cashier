@@ -1,4 +1,5 @@
 using Cashier.Model;
+using Cashier.Pages;
 
 
 namespace Cashier
@@ -10,7 +11,7 @@ namespace Cashier
             InitializeComponent();
         }
 
-       private void btnlogin_Click(object sender, EventArgs e)
+        private void btnlogin_Click(object sender, EventArgs e)
         {
             LoginAction();
         }
@@ -28,6 +29,26 @@ namespace Cashier
                 MessageBox.Show("Username atau Password salah");
                 return;
             }
+            switch (user.User_Type)
+            {
+                case "Admin":
+                    BerandaAdmin admin = new BerandaAdmin();
+                    admin.Show();
+                    this.Hide();
+                    break;
+
+                case "Staff":
+                    break;
+
+                default:
+                   MessageBox.Show("User tidak di temukan");
+                   break;
+            }
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

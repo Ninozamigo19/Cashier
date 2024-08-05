@@ -83,6 +83,7 @@
             login_bt.TabIndex = 4;
             login_bt.Text = "Login";
             login_bt.UseVisualStyleBackColor = false;
+            login_bt.Click += btnlogin_Click;
             // 
             // login
             // 
@@ -97,6 +98,7 @@
             Controls.Add(username);
             Name = "login";
             Text = "Login";
+            Load += login_Load;
             ResumeLayout(false);
             PerformLayout();
         }
