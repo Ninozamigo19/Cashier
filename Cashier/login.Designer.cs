@@ -33,6 +33,7 @@
             label1 = new Label();
             label2 = new Label();
             login_bt = new Button();
+            exit = new Button();
             SuspendLayout();
             // 
             // username
@@ -77,7 +78,7 @@
             // 
             login_bt.BackColor = Color.Lime;
             login_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            login_bt.Location = new Point(178, 224);
+            login_bt.Location = new Point(73, 224);
             login_bt.Name = "login_bt";
             login_bt.Size = new Size(126, 48);
             login_bt.TabIndex = 4;
@@ -85,18 +86,33 @@
             login_bt.UseVisualStyleBackColor = false;
             login_bt.Click += btnlogin_Click;
             // 
+            // exit
+            // 
+            exit.BackColor = Color.Red;
+            exit.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            exit.Location = new Point(285, 224);
+            exit.Name = "exit";
+            exit.Size = new Size(126, 48);
+            exit.TabIndex = 5;
+            exit.Text = "Exit";
+            exit.UseVisualStyleBackColor = false;
+            exit.Click += btnexit_Click;
+            // 
             // login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ButtonShadow;
-            ClientSize = new Size(528, 284);
+            BackColor = Color.SkyBlue;
+            ClientSize = new Size(474, 284);
+            Controls.Add(exit);
             Controls.Add(login_bt);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(password);
             Controls.Add(username);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             Load += login_Load;
             ResumeLayout(false);
@@ -110,5 +126,6 @@
         private Label label1;
         private Label label2;
         private Button login_bt;
+        private Button exit;
     }
 }
