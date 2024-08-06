@@ -29,7 +29,9 @@ namespace Cashier.Pages
 
         private void barang_bt_Click(object sender, EventArgs e)
         {
-
+            BarangAdmin barangAdmin = new BarangAdmin();
+            barangAdmin.Show();
+            this.Close();
         }
 
         private void logout_bt_Click(object sender, EventArgs e)

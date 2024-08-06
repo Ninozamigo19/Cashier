@@ -51,6 +51,9 @@ namespace Cashier
                     break;
 
                 case "Petugas":
+                    BerandaPetugas petugas = new BerandaPetugas();
+                    petugas.Show();
+                    this.Hide();
                     break;
 
                 default:

@@ -10,5 +10,8 @@
     <Compile Update="Pages\BerandaAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Pages\BerandaPetugas.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

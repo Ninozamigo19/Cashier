@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|c:\\users\\ninozamigo19\\documents\\project-lain\\cashier\\cashier\\pages\\berandapetugas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|solutionrelative:cashier\\pages\\berandapetugas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|c:\\users\\ninozamigo19\\documents\\project-lain\\cashier\\cashier\\pages\\berandapetugas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|solutionrelative:cashier\\pages\\berandapetugas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|c:\\users\\ninozamigo19\\documents\\project-lain\\cashier\\cashier\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|solutionrelative:cashier\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|c:\\users\\ninozamigo19\\documents\\project-lain\\cashier\\cashier\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|solutionrelative:cashier\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\cashier\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|solutionrelative:cashier\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\cashier\\pages\\berandaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|solutionrelative:cashier\\pages\\berandaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|c:\\users\\ninozamigo19\\documents\\project-lain\\cashier\\cashier\\pages\\barangadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|solutionrelative:cashier\\pages\\barangadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -11,24 +35,8 @@
       "RelativeMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|solutionrelative:cashier\\pages\\barangadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\cashier\\pages\\berandaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|solutionrelative:cashier\\pages\\berandaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\cashier\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|solutionrelative:cashier\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|c:\\users\\ninozamigo19\\documents\\project-lain\\cashier\\cashier\\pages\\berandaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|solutionrelative:cashier\\pages\\berandaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|c:\\users\\ninozamigo19\\documents\\project-lain\\cashier\\cashier\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|solutionrelative:cashier\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|c:\\users\\ninozamigo19\\documents\\project-lain\\cashier\\cashier\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|solutionrelative:cashier\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B572651-6D27-44E5-B0C9-F4E8BC318C04}|Cashier\\Cashier.csproj|c:\\users\\ninozamigo19\\documents\\project-lain\\cashier\\cashier\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,74 +74,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BarangAdmin.cs",
-              "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BarangAdmin.cs",
-              "RelativeDocumentMoniker": "Cashier\\Pages\\BarangAdmin.cs",
-              "ToolTip": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BarangAdmin.cs",
-              "RelativeToolTip": "Cashier\\Pages\\BarangAdmin.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAkwBoAAAAAAAAA",
+              "Title": "BerandaPetugas.cs",
+              "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BerandaPetugas.cs",
+              "RelativeDocumentMoniker": "Cashier\\Pages\\BerandaPetugas.cs",
+              "ToolTip": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BerandaPetugas.cs",
+              "RelativeToolTip": "Cashier\\Pages\\BerandaPetugas.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowCYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T04:27:33.573Z",
+              "WhenOpened": "2024-08-06T07:43:48.267Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BarangAdmin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BarangAdmin.cs",
-              "RelativeDocumentMoniker": "Cashier\\Pages\\BarangAdmin.cs",
-              "ToolTip": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BarangAdmin.cs [Design]",
-              "RelativeToolTip": "Cashier\\Pages\\BarangAdmin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T04:23:57.662Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BerandaAdmin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BerandaAdmin.cs",
-              "RelativeDocumentMoniker": "Cashier\\Pages\\BerandaAdmin.cs",
-              "ToolTip": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BerandaAdmin.cs [Design]",
-              "RelativeToolTip": "Cashier\\Pages\\BerandaAdmin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T23:56:00.835Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Model\\User.cs",
-              "RelativeDocumentMoniker": "Cashier\\Model\\User.cs",
-              "ToolTip": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Model\\User.cs",
-              "RelativeToolTip": "Cashier\\Model\\User.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAuwBAAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T01:49:07.49Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Program.cs",
-              "RelativeDocumentMoniker": "Cashier\\Program.cs",
-              "ToolTip": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Program.cs",
-              "RelativeToolTip": "Cashier\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T02:14:30.097Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "login.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\login.cs",
               "RelativeDocumentMoniker": "Cashier\\login.cs",
@@ -145,26 +103,88 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "login.cs",
               "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\login.cs",
               "RelativeDocumentMoniker": "Cashier\\login.cs",
               "ToolTip": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\login.cs",
               "RelativeToolTip": "Cashier\\login.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowDIAAAAaAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAowDcAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-02T06:44:38.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Program.cs",
+              "RelativeDocumentMoniker": "Cashier\\Program.cs",
+              "ToolTip": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Program.cs",
+              "RelativeToolTip": "Cashier\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAtwBEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T02:14:30.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BerandaPetugas.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BerandaPetugas.cs",
+              "RelativeDocumentMoniker": "Cashier\\Pages\\BerandaPetugas.cs",
+              "ToolTip": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BerandaPetugas.cs [Design]",
+              "RelativeToolTip": "Cashier\\Pages\\BerandaPetugas.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T07:42:07.231Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BarangAdmin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BarangAdmin.cs",
+              "RelativeDocumentMoniker": "Cashier\\Pages\\BarangAdmin.cs",
+              "ToolTip": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BarangAdmin.cs [Design]",
+              "RelativeToolTip": "Cashier\\Pages\\BarangAdmin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T04:23:57.662Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BarangAdmin.cs",
+              "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BarangAdmin.cs",
+              "RelativeDocumentMoniker": "Cashier\\Pages\\BarangAdmin.cs",
+              "ToolTip": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BarangAdmin.cs",
+              "RelativeToolTip": "Cashier\\Pages\\BarangAdmin.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAADwvxwAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T04:27:33.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BerandaAdmin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BerandaAdmin.cs",
+              "RelativeDocumentMoniker": "Cashier\\Pages\\BerandaAdmin.cs",
+              "ToolTip": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BerandaAdmin.cs [Design]",
+              "RelativeToolTip": "Cashier\\Pages\\BerandaAdmin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T23:56:00.835Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "BerandaAdmin.cs",
               "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BerandaAdmin.cs",
               "RelativeDocumentMoniker": "Cashier\\Pages\\BerandaAdmin.cs",
               "ToolTip": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Pages\\BerandaAdmin.cs",
               "RelativeToolTip": "Cashier\\Pages\\BerandaAdmin.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAowCcAAAAJAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA/wCEAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-04T23:58:29.948Z",
               "EditorCaption": ""
@@ -172,6 +192,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Model\\User.cs",
+              "RelativeDocumentMoniker": "Cashier\\Model\\User.cs",
+              "ToolTip": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Model\\User.cs",
+              "RelativeToolTip": "Cashier\\Model\\User.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwBAAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T01:49:07.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Model\\Product.cs",
               "RelativeDocumentMoniker": "Cashier\\Model\\Product.cs",
@@ -183,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Database.cs",
               "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Database.cs",
               "RelativeDocumentMoniker": "Cashier\\Database.cs",
@@ -195,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Customer.cs",
               "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Model\\Customer.cs",
               "RelativeDocumentMoniker": "Cashier\\Model\\Customer.cs",
@@ -207,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Sale.cs",
               "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Model\\Sale.cs",
               "RelativeDocumentMoniker": "Cashier\\Model\\Sale.cs",
@@ -219,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "SaleDetail.cs",
               "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Model\\SaleDetail.cs",
               "RelativeDocumentMoniker": "Cashier\\Model\\SaleDetail.cs",
@@ -231,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "20240801020800_Cashier.cs",
               "DocumentMoniker": "C:\\Users\\Ninozamigo19\\Documents\\Project-lain\\Cashier\\Cashier\\Migrations\\20240801020800_Cashier.cs",
               "RelativeDocumentMoniker": "Cashier\\Migrations\\20240801020800_Cashier.cs",

@@ -24,7 +24,9 @@ namespace Cashier.Pages
 
         private void kembali_bt_Click(object sender, EventArgs e)
         {
-
+            BerandaAdmin admin = new BerandaAdmin();
+            admin.Show();
+            this.Close();
         }
     }
 }

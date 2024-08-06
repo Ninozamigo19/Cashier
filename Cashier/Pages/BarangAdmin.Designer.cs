@@ -83,10 +83,10 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(215, 33);
+            dataGridView1.Location = new Point(220, 23);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(762, 515);
+            dataGridView1.Size = new Size(762, 362);
             dataGridView1.TabIndex = 2;
             // 
             // BarangAdmin
