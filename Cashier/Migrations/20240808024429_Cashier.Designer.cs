@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Cashier.Migrations
 {
     [DbContext(typeof(Database))]
-    [Migration("20240801020800_Cashier")]
+    [Migration("20240808024429_Cashier")]
     partial class Cashier
     {
         /// <inheritdoc />

@@ -40,5 +40,17 @@ namespace Cashier.Pages
             Logout.Show();
             this.Close();
         }
+
+        private void pekerja_bt_Click(object sender, EventArgs e)
+        {
+            DataPekerja pekerja = new DataPekerja();
+            pekerja.Show();
+            this.Close();
+        }
+
+        private void BerandaAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

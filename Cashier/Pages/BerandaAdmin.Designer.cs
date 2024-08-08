@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            pekerja_bt = new Button();
             panel2 = new Panel();
             logout_bt = new Button();
             barang_bt = new Button();
@@ -39,6 +40,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.AppWorkspace;
+            panel1.Controls.Add(pekerja_bt);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(logout_bt);
             panel1.Controls.Add(barang_bt);
@@ -48,6 +50,18 @@
             panel1.Size = new Size(183, 612);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // pekerja_bt
+            // 
+            pekerja_bt.BackColor = Color.Honeydew;
+            pekerja_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            pekerja_bt.Location = new Point(26, 162);
+            pekerja_bt.Name = "pekerja_bt";
+            pekerja_bt.Size = new Size(126, 61);
+            pekerja_bt.TabIndex = 6;
+            pekerja_bt.Text = "Daftar pekerja";
+            pekerja_bt.UseVisualStyleBackColor = false;
+            pekerja_bt.Click += pekerja_bt_Click;
             // 
             // panel2
             // 
@@ -85,7 +99,7 @@
             // 
             profile_bt.BackColor = Color.Honeydew;
             profile_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            profile_bt.Location = new Point(26, 235);
+            profile_bt.Location = new Point(26, 252);
             profile_bt.Name = "profile_bt";
             profile_bt.Size = new Size(126, 48);
             profile_bt.TabIndex = 5;
@@ -102,6 +116,7 @@
             Controls.Add(panel1);
             Name = "BerandaAdmin";
             Text = "BerandaAdmin";
+            Load += BerandaAdmin_Load;
             panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -113,5 +128,6 @@
         private Button barang_bt;
         private Button profile_bt;
         private Panel panel2;
+        private Button pekerja_bt;
     }
 }

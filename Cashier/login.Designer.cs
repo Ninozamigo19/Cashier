@@ -38,7 +38,7 @@
             // 
             // username
             // 
-            username.Location = new Point(73, 50);
+            username.Location = new Point(73, 57);
             username.Multiline = true;
             username.Name = "username";
             username.PlaceholderText = "Masukan Username";
@@ -47,7 +47,7 @@
             // 
             // password
             // 
-            password.Location = new Point(73, 148);
+            password.Location = new Point(73, 155);
             password.Multiline = true;
             password.Name = "password";
             password.PlaceholderText = "Masukan Password";
@@ -58,7 +58,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(73, 19);
+            label1.Location = new Point(73, 26);
             label1.Name = "label1";
             label1.Size = new Size(99, 28);
             label1.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(73, 117);
+            label2.Location = new Point(73, 124);
             label2.Name = "label2";
             label2.Size = new Size(93, 28);
             label2.TabIndex = 3;

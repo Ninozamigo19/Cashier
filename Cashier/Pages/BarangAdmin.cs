@@ -28,5 +28,25 @@ namespace Cashier.Pages
             admin.Show();
             this.Close();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editbarang_bt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void caribarang_bt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deletebarang_bt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
