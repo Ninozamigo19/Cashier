@@ -10,9 +10,9 @@ namespace Cashier.Model
     public class Sale
     {
         public int Id { get; set; }
-        public DateTime SaleDate { get; set; }
-        public decimal TotalPrice { get; set; }
-        public Customer Customer { get; set; }
+        public DateTime Tanggal_jual { get; set; }
+        public decimal Total_Harga { get; set; }
+        public Customer Pelanggan { get; set; }
 
         public static void CreateModel(ModelBuilder model)
         {
@@ -20,9 +20,9 @@ namespace Cashier.Model
             {
                 e.HasKey(e => e.Id);
                 e.Property(e => e.Id).ValueGeneratedOnAdd();
-                e.Property(e => e.SaleDate).HasColumnType("date").IsRequired();
-                e.Property(e => e.TotalPrice).HasColumnType("decimal(10,2)").IsRequired();
-                e.HasOne(e => e.Customer);
+                e.Property(e => e.Tanggal_jual).HasColumnType("date").IsRequired();
+                e.Property(e => e.Total_Harga).HasColumnType("decimal(10,2)").IsRequired();
+                e.HasOne(e => e.Pelanggan);
             });
         }
     }

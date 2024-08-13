@@ -38,7 +38,7 @@ namespace Cashier.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
-                    b.Property<string>("NoTelp")
+                    b.Property<string>("No_Telp")
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
@@ -55,15 +55,15 @@ namespace Cashier.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("varchar(50)");
-
-                    b.Property<decimal>("Price")
+                    b.Property<decimal>("Harga")
                         .HasColumnType("decimal(10,2)");
 
-                    b.Property<int>("Stock")
+                    b.Property<int>("Jumlah")
                         .HasColumnType("int");
+
+                    b.Property<string>("Nama")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
                     b.HasKey("Id");
 
@@ -78,18 +78,18 @@ namespace Cashier.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CustomerId")
+                    b.Property<int>("PelangganId")
                         .HasColumnType("integer");
 
-                    b.Property<DateTime>("SaleDate")
+                    b.Property<DateTime>("Tanggal_jual")
                         .HasColumnType("date");
 
-                    b.Property<decimal>("TotalPrice")
+                    b.Property<decimal>("Total_Harga")
                         .HasColumnType("decimal(10,2)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CustomerId");
+                    b.HasIndex("PelangganId");
 
                     b.ToTable("Sales");
                 });
@@ -102,28 +102,28 @@ namespace Cashier.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ProductId")
+                    b.Property<int>("JualId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("Quantity")
+                    b.Property<int>("Jumlah")
                         .HasColumnType("int");
 
-                    b.Property<int>("SaleId")
+                    b.Property<int>("PenggunaId")
                         .HasColumnType("integer");
 
-                    b.Property<decimal>("SubTotalPrice")
+                    b.Property<int>("ProdukId")
+                        .HasColumnType("integer");
+
+                    b.Property<decimal>("SubTotalHarga")
                         .HasColumnType("decimal(10,2)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductId");
+                    b.HasIndex("JualId");
 
-                    b.HasIndex("SaleId");
+                    b.HasIndex("PenggunaId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("ProdukId");
 
                     b.ToTable("SalesDetails");
                 });
@@ -136,23 +136,23 @@ namespace Cashier.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Address")
+                    b.Property<string>("Alamat")
                         .IsRequired()
                         .HasColumnType("varchar(150)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Level")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("Nama")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("No_Telp")
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("varchar(50)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("varchar(50)");
-
-                    b.Property<string>("User_Type")
                         .IsRequired()
                         .HasColumnType("varchar(50)");
 
@@ -167,40 +167,40 @@ namespace Cashier.Migrations
 
             modelBuilder.Entity("Cashier.Model.Sale", b =>
                 {
-                    b.HasOne("Cashier.Model.Customer", "Customer")
+                    b.HasOne("Cashier.Model.Customer", "Pelanggan")
                         .WithMany()
-                        .HasForeignKey("CustomerId")
+                        .HasForeignKey("PelangganId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Customer");
+                    b.Navigation("Pelanggan");
                 });
 
             modelBuilder.Entity("Cashier.Model.SaleDetail", b =>
                 {
-                    b.HasOne("Cashier.Model.Product", "Product")
+                    b.HasOne("Cashier.Model.Sale", "Jual")
                         .WithMany()
-                        .HasForeignKey("ProductId")
+                        .HasForeignKey("JualId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Cashier.Model.Sale", "Sale")
+                    b.HasOne("Cashier.Model.User", "Pengguna")
                         .WithMany()
-                        .HasForeignKey("SaleId")
+                        .HasForeignKey("PenggunaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Cashier.Model.User", "User")
+                    b.HasOne("Cashier.Model.Product", "Produk")
                         .WithMany()
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("ProdukId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Product");
+                    b.Navigation("Jual");
 
-                    b.Navigation("Sale");
+                    b.Navigation("Pengguna");
 
-                    b.Navigation("User");
+                    b.Navigation("Produk");
                 });
 #pragma warning restore 612, 618
         }

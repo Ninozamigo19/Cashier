@@ -10,29 +10,20 @@ using System.Windows.Forms;
 
 namespace Cashier.Pages
 {
-    public partial class DataPekerja : Form
+    public partial class Karyawan : Form
     {
-        public DataPekerja()
+        public Karyawan()
         {
             InitializeComponent();
+            userBindingSource.DataSource = Program.db.Users.ToList();
         }
 
-        private void caripekerja_bt_CLick(object sender, EventArgs e)
+        private void carikaryawan_bt_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void editpekerja_bt_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tambahpekerja_bt_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void deletepekerja_bt_Click(object sender, EventArgs e)
+        private void Karyawan_Load(object sender, EventArgs e)
         {
 
         }

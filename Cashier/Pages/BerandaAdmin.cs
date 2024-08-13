@@ -41,16 +41,16 @@ namespace Cashier.Pages
             this.Close();
         }
 
-        private void pekerja_bt_Click(object sender, EventArgs e)
-        {
-            DataPekerja pekerja = new DataPekerja();
-            pekerja.Show();
-            this.Close();
-        }
-
         private void BerandaAdmin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void karyawan_bt_Click(object sender, EventArgs e)
+        {
+            Karyawan karyawan =new Karyawan();
+            karyawan.Show();
+            this.Close();
         }
     }
 }

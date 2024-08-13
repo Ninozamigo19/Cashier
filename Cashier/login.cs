@@ -42,7 +42,7 @@ namespace Cashier
                 return;
             }
 
-            switch (user.User_Type)
+            switch (user.Level)
             {
                 case "Admin":
                     BerandaAdmin admin = new BerandaAdmin();

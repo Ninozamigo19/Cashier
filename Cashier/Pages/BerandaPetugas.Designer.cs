@@ -34,15 +34,17 @@
             profile_bt = new Button();
             dataGridView1 = new DataGridView();
             panel3 = new Panel();
-            bayar_bt = new Button();
-            Tb_TotalHarga = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            Tb_JumlahUang = new TextBox();
-            label3 = new Label();
-            Tb_Diskon = new TextBox();
             label4 = new Label();
             Tb_Kembalian = new TextBox();
+            label3 = new Label();
+            Tb_Diskon = new TextBox();
+            label2 = new Label();
+            Tb_JumlahUang = new TextBox();
+            label1 = new Label();
+            Tb_TotalHarga = new TextBox();
+            bayar_bt = new Button();
+            tambahbarang_bt = new Button();
+            hapusbarang_bt = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel3.SuspendLayout();
@@ -84,7 +86,7 @@
             // 
             profile_bt.BackColor = Color.Honeydew;
             profile_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            profile_bt.Location = new Point(26, 168);
+            profile_bt.Location = new Point(26, 183);
             profile_bt.Name = "profile_bt";
             profile_bt.Size = new Size(126, 48);
             profile_bt.TabIndex = 5;
@@ -94,10 +96,10 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(243, 29);
+            dataGridView1.Location = new Point(207, 88);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(442, 474);
+            dataGridView1.Size = new Size(480, 415);
             dataGridView1.TabIndex = 2;
             // 
             // panel3
@@ -117,53 +119,23 @@
             panel3.Size = new Size(268, 472);
             panel3.TabIndex = 3;
             // 
-            // bayar_bt
+            // label4
             // 
-            bayar_bt.BackColor = Color.Honeydew;
-            bayar_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            bayar_bt.Location = new Point(19, 408);
-            bayar_bt.Name = "bayar_bt";
-            bayar_bt.Size = new Size(238, 48);
-            bayar_bt.TabIndex = 6;
-            bayar_bt.Text = "Bayar";
-            bayar_bt.UseVisualStyleBackColor = false;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label4.Location = new Point(3, 269);
+            label4.Name = "label4";
+            label4.Size = new Size(95, 23);
+            label4.TabIndex = 14;
+            label4.Text = "Kembalian";
             // 
-            // Tb_TotalHarga
+            // Tb_Kembalian
             // 
-            Tb_TotalHarga.Location = new Point(120, 56);
-            Tb_TotalHarga.Multiline = true;
-            Tb_TotalHarga.Name = "Tb_TotalHarga";
-            Tb_TotalHarga.Size = new Size(137, 39);
-            Tb_TotalHarga.TabIndex = 7;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            label1.Location = new Point(3, 57);
-            label1.Name = "label1";
-            label1.Size = new Size(103, 23);
-            label1.TabIndex = 8;
-            label1.Text = "Total Harga";
-            label1.Click += label1_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            label2.Location = new Point(3, 127);
-            label2.Name = "label2";
-            label2.Size = new Size(115, 23);
-            label2.TabIndex = 10;
-            label2.Text = "Jumlah Uang";
-            // 
-            // Tb_JumlahUang
-            // 
-            Tb_JumlahUang.Location = new Point(120, 127);
-            Tb_JumlahUang.Multiline = true;
-            Tb_JumlahUang.Name = "Tb_JumlahUang";
-            Tb_JumlahUang.Size = new Size(137, 39);
-            Tb_JumlahUang.TabIndex = 9;
+            Tb_Kembalian.Location = new Point(120, 269);
+            Tb_Kembalian.Multiline = true;
+            Tb_Kembalian.Name = "Tb_Kembalian";
+            Tb_Kembalian.Size = new Size(137, 39);
+            Tb_Kembalian.TabIndex = 13;
             // 
             // label3
             // 
@@ -184,23 +156,77 @@
             Tb_Diskon.Size = new Size(137, 39);
             Tb_Diskon.TabIndex = 11;
             // 
-            // label4
+            // label2
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            label4.Location = new Point(3, 269);
-            label4.Name = "label4";
-            label4.Size = new Size(95, 23);
-            label4.TabIndex = 14;
-            label4.Text = "Kembalian";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label2.Location = new Point(3, 127);
+            label2.Name = "label2";
+            label2.Size = new Size(115, 23);
+            label2.TabIndex = 10;
+            label2.Text = "Jumlah Uang";
             // 
-            // Tb_Kembalian
+            // Tb_JumlahUang
             // 
-            Tb_Kembalian.Location = new Point(120, 269);
-            Tb_Kembalian.Multiline = true;
-            Tb_Kembalian.Name = "Tb_Kembalian";
-            Tb_Kembalian.Size = new Size(137, 39);
-            Tb_Kembalian.TabIndex = 13;
+            Tb_JumlahUang.Location = new Point(120, 127);
+            Tb_JumlahUang.Multiline = true;
+            Tb_JumlahUang.Name = "Tb_JumlahUang";
+            Tb_JumlahUang.Size = new Size(137, 39);
+            Tb_JumlahUang.TabIndex = 9;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label1.Location = new Point(3, 57);
+            label1.Name = "label1";
+            label1.Size = new Size(103, 23);
+            label1.TabIndex = 8;
+            label1.Text = "Total Harga";
+            label1.Click += label1_Click;
+            // 
+            // Tb_TotalHarga
+            // 
+            Tb_TotalHarga.Location = new Point(120, 56);
+            Tb_TotalHarga.Multiline = true;
+            Tb_TotalHarga.Name = "Tb_TotalHarga";
+            Tb_TotalHarga.Size = new Size(137, 39);
+            Tb_TotalHarga.TabIndex = 7;
+            // 
+            // bayar_bt
+            // 
+            bayar_bt.BackColor = Color.Honeydew;
+            bayar_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            bayar_bt.Location = new Point(19, 408);
+            bayar_bt.Name = "bayar_bt";
+            bayar_bt.Size = new Size(238, 48);
+            bayar_bt.TabIndex = 6;
+            bayar_bt.Text = "Bayar";
+            bayar_bt.UseVisualStyleBackColor = false;
+            // 
+            // tambahbarang_bt
+            // 
+            tambahbarang_bt.BackColor = Color.Honeydew;
+            tambahbarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tambahbarang_bt.Location = new Point(207, 31);
+            tambahbarang_bt.Name = "tambahbarang_bt";
+            tambahbarang_bt.Size = new Size(126, 48);
+            tambahbarang_bt.TabIndex = 6;
+            tambahbarang_bt.Text = "Tambah";
+            tambahbarang_bt.UseVisualStyleBackColor = false;
+            tambahbarang_bt.Click += tambahbarang_bt_Click;
+            // 
+            // hapusbarang_bt
+            // 
+            hapusbarang_bt.BackColor = Color.Honeydew;
+            hapusbarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            hapusbarang_bt.Location = new Point(339, 31);
+            hapusbarang_bt.Name = "hapusbarang_bt";
+            hapusbarang_bt.Size = new Size(126, 48);
+            hapusbarang_bt.TabIndex = 7;
+            hapusbarang_bt.Text = "Hapus";
+            hapusbarang_bt.UseVisualStyleBackColor = false;
+            hapusbarang_bt.Click += hapusbarang_bt_Click;
             // 
             // BerandaPetugas
             // 
@@ -208,6 +234,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SkyBlue;
             ClientSize = new Size(1007, 560);
+            Controls.Add(hapusbarang_bt);
+            Controls.Add(tambahbarang_bt);
             Controls.Add(panel3);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
@@ -237,5 +265,7 @@
         private TextBox Tb_JumlahUang;
         private Label label4;
         private TextBox Tb_Kembalian;
+        private Button tambahbarang_bt;
+        private Button hapusbarang_bt;
     }
 }

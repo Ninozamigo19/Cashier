@@ -15,6 +15,7 @@ namespace Cashier.Pages
         public BarangAdmin()
         {
             InitializeComponent();
+            productBindingSource.DataSource = Program.db.Products.ToList();
         }
 
         private void tambahbarang_bt_Click(object sender, EventArgs e)
@@ -34,19 +35,24 @@ namespace Cashier.Pages
 
         }
 
-        private void editbarang_bt_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void caribarang_bt_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void deletebarang_bt_Click(object sender, EventArgs e)
+        private void hapusbarang_bt_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ubahbarang_bt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

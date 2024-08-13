@@ -34,15 +34,15 @@
             kembali_bt = new Button();
             tambahbarang_bt = new Button();
             dataGridView1 = new DataGridView();
-            Tb_Caribarang = new TextBox();
-            editbarang_bt = new Button();
-            caribarang_bt = new Button();
-            deletebarang_bt = new Button();
-            productBindingSource = new BindingSource(components);
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            nameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            priceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            stockDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            namaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            hargaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            jumlahDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productBindingSource = new BindingSource(components);
+            Tb_Caribarang = new TextBox();
+            ubahbarang_bt = new Button();
+            caribarang_bt = new Button();
+            hapusbarang_bt = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
@@ -82,9 +82,9 @@
             // 
             tambahbarang_bt.BackColor = Color.Honeydew;
             tambahbarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            tambahbarang_bt.Location = new Point(198, 12);
+            tambahbarang_bt.Location = new Point(208, 14);
             tambahbarang_bt.Name = "tambahbarang_bt";
-            tambahbarang_bt.Size = new Size(125, 53);
+            tambahbarang_bt.Size = new Size(125, 33);
             tambahbarang_bt.TabIndex = 5;
             tambahbarang_bt.Text = "Tambah";
             tambahbarang_bt.UseVisualStyleBackColor = false;
@@ -92,65 +92,19 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn, priceDataGridViewTextBoxColumn, stockDataGridViewTextBoxColumn });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, namaDataGridViewTextBoxColumn, hargaDataGridViewTextBoxColumn, jumlahDataGridViewTextBoxColumn });
             dataGridView1.DataSource = productBindingSource;
-            dataGridView1.Location = new Point(198, 152);
+            dataGridView1.Location = new Point(208, 53);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(797, 382);
+            dataGridView1.Size = new Size(688, 495);
             dataGridView1.TabIndex = 2;
-            // 
-            // Tb_Caribarang
-            // 
-            Tb_Caribarang.Location = new Point(709, 12);
-            Tb_Caribarang.Multiline = true;
-            Tb_Caribarang.Name = "Tb_Caribarang";
-            Tb_Caribarang.PlaceholderText = "Cari barang";
-            Tb_Caribarang.Size = new Size(286, 33);
-            Tb_Caribarang.TabIndex = 3;
-            Tb_Caribarang.TextChanged += textBox1_TextChanged;
-            // 
-            // editbarang_bt
-            // 
-            editbarang_bt.BackColor = Color.Honeydew;
-            editbarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            editbarang_bt.Location = new Point(329, 12);
-            editbarang_bt.Name = "editbarang_bt";
-            editbarang_bt.Size = new Size(125, 53);
-            editbarang_bt.TabIndex = 6;
-            editbarang_bt.Text = "Edit";
-            editbarang_bt.UseVisualStyleBackColor = false;
-            editbarang_bt.Click += editbarang_bt_Click;
-            // 
-            // caribarang_bt
-            // 
-            caribarang_bt.BackColor = Color.Honeydew;
-            caribarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            caribarang_bt.Location = new Point(578, 12);
-            caribarang_bt.Name = "caribarang_bt";
-            caribarang_bt.Size = new Size(125, 53);
-            caribarang_bt.TabIndex = 7;
-            caribarang_bt.Text = "Cari";
-            caribarang_bt.UseVisualStyleBackColor = false;
-            caribarang_bt.Click += caribarang_bt_Click;
-            // 
-            // deletebarang_bt
-            // 
-            deletebarang_bt.BackColor = Color.Honeydew;
-            deletebarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            deletebarang_bt.Location = new Point(198, 80);
-            deletebarang_bt.Name = "deletebarang_bt";
-            deletebarang_bt.Size = new Size(125, 53);
-            deletebarang_bt.TabIndex = 8;
-            deletebarang_bt.Text = "Delete";
-            deletebarang_bt.UseVisualStyleBackColor = false;
-            deletebarang_bt.Click += deletebarang_bt_Click;
-            // 
-            // productBindingSource
-            // 
-            productBindingSource.DataSource = typeof(Model.Product);
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -158,31 +112,85 @@
             idDataGridViewTextBoxColumn.HeaderText = "Id";
             idDataGridViewTextBoxColumn.MinimumWidth = 6;
             idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.ReadOnly = true;
             idDataGridViewTextBoxColumn.Width = 125;
             // 
-            // nameDataGridViewTextBoxColumn
+            // namaDataGridViewTextBoxColumn
             // 
-            nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            nameDataGridViewTextBoxColumn.Width = 125;
+            namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
+            namaDataGridViewTextBoxColumn.HeaderText = "Nama";
+            namaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
+            namaDataGridViewTextBoxColumn.ReadOnly = true;
+            namaDataGridViewTextBoxColumn.Width = 170;
             // 
-            // priceDataGridViewTextBoxColumn
+            // hargaDataGridViewTextBoxColumn
             // 
-            priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            priceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            priceDataGridViewTextBoxColumn.Width = 125;
+            hargaDataGridViewTextBoxColumn.DataPropertyName = "Harga";
+            hargaDataGridViewTextBoxColumn.HeaderText = "Harga";
+            hargaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            hargaDataGridViewTextBoxColumn.Name = "hargaDataGridViewTextBoxColumn";
+            hargaDataGridViewTextBoxColumn.ReadOnly = true;
+            hargaDataGridViewTextBoxColumn.Width = 170;
             // 
-            // stockDataGridViewTextBoxColumn
+            // jumlahDataGridViewTextBoxColumn
             // 
-            stockDataGridViewTextBoxColumn.DataPropertyName = "Stock";
-            stockDataGridViewTextBoxColumn.HeaderText = "Stock";
-            stockDataGridViewTextBoxColumn.MinimumWidth = 6;
-            stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
-            stockDataGridViewTextBoxColumn.Width = 125;
+            jumlahDataGridViewTextBoxColumn.DataPropertyName = "Jumlah";
+            jumlahDataGridViewTextBoxColumn.HeaderText = "Jumlah";
+            jumlahDataGridViewTextBoxColumn.MinimumWidth = 6;
+            jumlahDataGridViewTextBoxColumn.Name = "jumlahDataGridViewTextBoxColumn";
+            jumlahDataGridViewTextBoxColumn.ReadOnly = true;
+            jumlahDataGridViewTextBoxColumn.Width = 170;
+            // 
+            // productBindingSource
+            // 
+            productBindingSource.DataSource = typeof(Model.Product);
+            // 
+            // Tb_Caribarang
+            // 
+            Tb_Caribarang.Location = new Point(599, 14);
+            Tb_Caribarang.Multiline = true;
+            Tb_Caribarang.Name = "Tb_Caribarang";
+            Tb_Caribarang.PlaceholderText = "Cari nama barang";
+            Tb_Caribarang.Size = new Size(286, 33);
+            Tb_Caribarang.TabIndex = 3;
+            Tb_Caribarang.TextChanged += textBox1_TextChanged;
+            // 
+            // ubahbarang_bt
+            // 
+            ubahbarang_bt.BackColor = Color.Honeydew;
+            ubahbarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ubahbarang_bt.Location = new Point(339, 14);
+            ubahbarang_bt.Name = "ubahbarang_bt";
+            ubahbarang_bt.Size = new Size(125, 33);
+            ubahbarang_bt.TabIndex = 6;
+            ubahbarang_bt.Text = "Ubah";
+            ubahbarang_bt.UseVisualStyleBackColor = false;
+            ubahbarang_bt.Click += ubahbarang_bt_Click;
+            // 
+            // caribarang_bt
+            // 
+            caribarang_bt.BackColor = Color.Honeydew;
+            caribarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            caribarang_bt.Location = new Point(891, 14);
+            caribarang_bt.Name = "caribarang_bt";
+            caribarang_bt.Size = new Size(95, 33);
+            caribarang_bt.TabIndex = 7;
+            caribarang_bt.Text = "Cari";
+            caribarang_bt.UseVisualStyleBackColor = false;
+            caribarang_bt.Click += caribarang_bt_Click;
+            // 
+            // hapusbarang_bt
+            // 
+            hapusbarang_bt.BackColor = Color.Honeydew;
+            hapusbarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            hapusbarang_bt.Location = new Point(470, 14);
+            hapusbarang_bt.Name = "hapusbarang_bt";
+            hapusbarang_bt.Size = new Size(125, 33);
+            hapusbarang_bt.TabIndex = 8;
+            hapusbarang_bt.Text = "Hapus";
+            hapusbarang_bt.UseVisualStyleBackColor = false;
+            hapusbarang_bt.Click += hapusbarang_bt_Click;
             // 
             // BarangAdmin
             // 
@@ -190,9 +198,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SkyBlue;
             ClientSize = new Size(1007, 560);
-            Controls.Add(deletebarang_bt);
+            Controls.Add(hapusbarang_bt);
             Controls.Add(caribarang_bt);
-            Controls.Add(editbarang_bt);
+            Controls.Add(ubahbarang_bt);
             Controls.Add(Tb_Caribarang);
             Controls.Add(dataGridView1);
             Controls.Add(tambahbarang_bt);
@@ -215,13 +223,16 @@
         private Button tambahbarang_bt;
         private DataGridView dataGridView1;
         private TextBox Tb_Caribarang;
-        private Button editbarang_bt;
+        private Button ubahbarang_bt;
         private Button caribarang_bt;
-        private Button deletebarang_bt;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private Button hapusbarang_bt;
+        private BindingSource productBindingSource;
         private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;
-        private BindingSource productBindingSource;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn hargaDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn jumlahDataGridViewTextBoxColumn;
     }
 }

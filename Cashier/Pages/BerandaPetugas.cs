@@ -38,5 +38,15 @@ namespace Cashier.Pages
         {
 
         }
+
+        private void tambahbarang_bt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hapusbarang_bt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

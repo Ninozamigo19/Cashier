@@ -19,8 +19,8 @@ namespace Cashier.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Nama = table.Column<string>(type: "varchar(50)", nullable: false),
-                    Alamat = table.Column<string>(type: "varchar(150)", nullable: false),
-                    NoTelp = table.Column<string>(type: "varchar(50)", nullable: false)
+                    No_Telp = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Alamat = table.Column<string>(type: "varchar(150)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -33,9 +33,9 @@ namespace Cashier.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Name = table.Column<string>(type: "varchar(50)", nullable: false),
-                    Price = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
-                    Stock = table.Column<int>(type: "int", nullable: false)
+                    Nama = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Harga = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
+                    Jumlah = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -48,10 +48,10 @@ namespace Cashier.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    User_Type = table.Column<string>(type: "varchar(50)", nullable: false),
-                    Name = table.Column<string>(type: "varchar(50)", nullable: false),
-                    Address = table.Column<string>(type: "varchar(150)", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Nama = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Level = table.Column<string>(type: "varchar(50)", nullable: false),
+                    No_Telp = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Alamat = table.Column<string>(type: "varchar(150)", nullable: false),
                     Username = table.Column<string>(type: "varchar(50)", nullable: false),
                     Password = table.Column<string>(type: "varchar(50)", nullable: false)
                 },
@@ -66,16 +66,16 @@ namespace Cashier.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    SaleDate = table.Column<DateTime>(type: "date", nullable: false),
-                    TotalPrice = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
-                    CustomerId = table.Column<int>(type: "integer", nullable: false)
+                    Tanggal_jual = table.Column<DateTime>(type: "date", nullable: false),
+                    Total_Harga = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
+                    PelangganId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Sales", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Sales_Customers_CustomerId",
-                        column: x => x.CustomerId,
+                        name: "FK_Sales_Customers_PelangganId",
+                        column: x => x.PelangganId,
                         principalTable: "Customers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -87,54 +87,54 @@ namespace Cashier.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    ProductId = table.Column<int>(type: "integer", nullable: false),
-                    SaleId = table.Column<int>(type: "integer", nullable: false),
-                    Quantity = table.Column<int>(type: "int", nullable: false),
-                    SubTotalPrice = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
-                    UserId = table.Column<int>(type: "integer", nullable: false)
+                    ProdukId = table.Column<int>(type: "integer", nullable: false),
+                    JualId = table.Column<int>(type: "integer", nullable: false),
+                    Jumlah = table.Column<int>(type: "int", nullable: false),
+                    SubTotalHarga = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
+                    PenggunaId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_SalesDetails", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_SalesDetails_Products_ProductId",
-                        column: x => x.ProductId,
+                        name: "FK_SalesDetails_Products_ProdukId",
+                        column: x => x.ProdukId,
                         principalTable: "Products",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_SalesDetails_Sales_SaleId",
-                        column: x => x.SaleId,
+                        name: "FK_SalesDetails_Sales_JualId",
+                        column: x => x.JualId,
                         principalTable: "Sales",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_SalesDetails_Users_UserId",
-                        column: x => x.UserId,
+                        name: "FK_SalesDetails_Users_PenggunaId",
+                        column: x => x.PenggunaId,
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Sales_CustomerId",
+                name: "IX_Sales_PelangganId",
                 table: "Sales",
-                column: "CustomerId");
+                column: "PelangganId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SalesDetails_ProductId",
+                name: "IX_SalesDetails_JualId",
                 table: "SalesDetails",
-                column: "ProductId");
+                column: "JualId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SalesDetails_SaleId",
+                name: "IX_SalesDetails_PenggunaId",
                 table: "SalesDetails",
-                column: "SaleId");
+                column: "PenggunaId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SalesDetails_UserId",
+                name: "IX_SalesDetails_ProdukId",
                 table: "SalesDetails",
-                column: "UserId");
+                column: "ProdukId");
         }
 
         /// <inheritdoc />
