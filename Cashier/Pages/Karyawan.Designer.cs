@@ -31,7 +31,7 @@
             components = new System.ComponentModel.Container();
             hapusbarang_bt = new Button();
             carikaryawan_bt = new Button();
-            ubahbarang_bt = new Button();
+            ubahkaryawan_bt = new Button();
             Tb_Namakaryawan = new TextBox();
             dataGridView1 = new DataGridView();
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -42,10 +42,11 @@
             usernameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             passwordDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             userBindingSource = new BindingSource(components);
-            tambahbarang_bt = new Button();
+            tambahkaryawan_bt = new Button();
             panel1 = new Panel();
             panel2 = new Panel();
             kembali_bt = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)userBindingSource).BeginInit();
             panel1.SuspendLayout();
@@ -55,7 +56,7 @@
             // 
             hapusbarang_bt.BackColor = Color.Honeydew;
             hapusbarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            hapusbarang_bt.Location = new Point(479, 6);
+            hapusbarang_bt.Location = new Point(479, 112);
             hapusbarang_bt.Name = "hapusbarang_bt";
             hapusbarang_bt.Size = new Size(125, 33);
             hapusbarang_bt.TabIndex = 15;
@@ -66,7 +67,7 @@
             // 
             carikaryawan_bt.BackColor = Color.Honeydew;
             carikaryawan_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            carikaryawan_bt.Location = new Point(902, 6);
+            carikaryawan_bt.Location = new Point(902, 112);
             carikaryawan_bt.Name = "carikaryawan_bt";
             carikaryawan_bt.Size = new Size(93, 33);
             carikaryawan_bt.TabIndex = 14;
@@ -74,20 +75,21 @@
             carikaryawan_bt.UseVisualStyleBackColor = false;
             carikaryawan_bt.Click += carikaryawan_bt_Click;
             // 
-            // ubahbarang_bt
+            // ubahkaryawan_bt
             // 
-            ubahbarang_bt.BackColor = Color.Honeydew;
-            ubahbarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ubahbarang_bt.Location = new Point(348, 6);
-            ubahbarang_bt.Name = "ubahbarang_bt";
-            ubahbarang_bt.Size = new Size(125, 33);
-            ubahbarang_bt.TabIndex = 13;
-            ubahbarang_bt.Text = "Ubah";
-            ubahbarang_bt.UseVisualStyleBackColor = false;
+            ubahkaryawan_bt.BackColor = Color.Honeydew;
+            ubahkaryawan_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ubahkaryawan_bt.Location = new Point(348, 112);
+            ubahkaryawan_bt.Name = "ubahkaryawan_bt";
+            ubahkaryawan_bt.Size = new Size(125, 33);
+            ubahkaryawan_bt.TabIndex = 13;
+            ubahkaryawan_bt.Text = "Ubah";
+            ubahkaryawan_bt.UseVisualStyleBackColor = false;
+            ubahkaryawan_bt.Click += ubahkaryawan_bt_Click;
             // 
             // Tb_Namakaryawan
             // 
-            Tb_Namakaryawan.Location = new Point(610, 6);
+            Tb_Namakaryawan.Location = new Point(610, 112);
             Tb_Namakaryawan.Multiline = true;
             Tb_Namakaryawan.Name = "Tb_Namakaryawan";
             Tb_Namakaryawan.PlaceholderText = "Cari nama Karyawan";
@@ -103,12 +105,13 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, namaDataGridViewTextBoxColumn, levelDataGridViewTextBoxColumn, noTelpDataGridViewTextBoxColumn, alamatDataGridViewTextBoxColumn, usernameDataGridViewTextBoxColumn, passwordDataGridViewTextBoxColumn });
             dataGridView1.DataSource = userBindingSource;
-            dataGridView1.Location = new Point(217, 45);
+            dataGridView1.Location = new Point(217, 151);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(778, 503);
+            dataGridView1.Size = new Size(778, 397);
             dataGridView1.TabIndex = 10;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -177,16 +180,17 @@
             // 
             userBindingSource.DataSource = typeof(Model.User);
             // 
-            // tambahbarang_bt
+            // tambahkaryawan_bt
             // 
-            tambahbarang_bt.BackColor = Color.Honeydew;
-            tambahbarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            tambahbarang_bt.Location = new Point(217, 6);
-            tambahbarang_bt.Name = "tambahbarang_bt";
-            tambahbarang_bt.Size = new Size(125, 33);
-            tambahbarang_bt.TabIndex = 12;
-            tambahbarang_bt.Text = "Tambah Data";
-            tambahbarang_bt.UseVisualStyleBackColor = false;
+            tambahkaryawan_bt.BackColor = Color.Honeydew;
+            tambahkaryawan_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tambahkaryawan_bt.Location = new Point(217, 112);
+            tambahkaryawan_bt.Name = "tambahkaryawan_bt";
+            tambahkaryawan_bt.Size = new Size(125, 33);
+            tambahkaryawan_bt.TabIndex = 12;
+            tambahkaryawan_bt.Text = "Tambah Data";
+            tambahkaryawan_bt.UseVisualStyleBackColor = false;
+            tambahkaryawan_bt.Click += tambahkaryawan_bt_Click;
             // 
             // panel1
             // 
@@ -218,18 +222,29 @@
             kembali_bt.UseVisualStyleBackColor = false;
             kembali_bt.Click += kembali_bt_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(217, 1);
+            label1.Name = "label1";
+            label1.Size = new Size(312, 54);
+            label1.TabIndex = 16;
+            label1.Text = "Data Karyawan";
+            // 
             // Karyawan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SkyBlue;
             ClientSize = new Size(1007, 560);
+            Controls.Add(label1);
             Controls.Add(hapusbarang_bt);
             Controls.Add(carikaryawan_bt);
-            Controls.Add(ubahbarang_bt);
+            Controls.Add(ubahkaryawan_bt);
             Controls.Add(Tb_Namakaryawan);
             Controls.Add(dataGridView1);
-            Controls.Add(tambahbarang_bt);
+            Controls.Add(tambahkaryawan_bt);
             Controls.Add(panel1);
             Name = "Karyawan";
             Text = "Karyawan";
@@ -245,10 +260,10 @@
 
         private Button hapusbarang_bt;
         private Button carikaryawan_bt;
-        private Button ubahbarang_bt;
+        private Button ubahkaryawan_bt;
         private TextBox Tb_Namakaryawan;
         private DataGridView dataGridView1;
-        private Button tambahbarang_bt;
+        private Button tambahkaryawan_bt;
         private Panel panel1;
         private Panel panel2;
         private Button kembali_bt;
@@ -260,5 +275,6 @@
         private DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private BindingSource userBindingSource;
+        private Label label1;
     }
 }
