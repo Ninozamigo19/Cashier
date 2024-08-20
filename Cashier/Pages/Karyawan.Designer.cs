@@ -56,20 +56,21 @@
             // 
             hapusbarang_bt.BackColor = Color.Honeydew;
             hapusbarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            hapusbarang_bt.Location = new Point(479, 112);
+            hapusbarang_bt.Location = new Point(464, 112);
             hapusbarang_bt.Name = "hapusbarang_bt";
             hapusbarang_bt.Size = new Size(125, 33);
             hapusbarang_bt.TabIndex = 15;
             hapusbarang_bt.Text = "Hapus";
             hapusbarang_bt.UseVisualStyleBackColor = false;
+            hapusbarang_bt.Click += hapusbarang_bt_Click;
             // 
             // carikaryawan_bt
             // 
             carikaryawan_bt.BackColor = Color.Honeydew;
             carikaryawan_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            carikaryawan_bt.Location = new Point(902, 112);
+            carikaryawan_bt.Location = new Point(887, 112);
             carikaryawan_bt.Name = "carikaryawan_bt";
-            carikaryawan_bt.Size = new Size(93, 33);
+            carikaryawan_bt.Size = new Size(108, 33);
             carikaryawan_bt.TabIndex = 14;
             carikaryawan_bt.Text = "Cari";
             carikaryawan_bt.UseVisualStyleBackColor = false;
@@ -79,7 +80,7 @@
             // 
             ubahkaryawan_bt.BackColor = Color.Honeydew;
             ubahkaryawan_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ubahkaryawan_bt.Location = new Point(348, 112);
+            ubahkaryawan_bt.Location = new Point(333, 112);
             ubahkaryawan_bt.Name = "ubahkaryawan_bt";
             ubahkaryawan_bt.Size = new Size(125, 33);
             ubahkaryawan_bt.TabIndex = 13;
@@ -89,7 +90,7 @@
             // 
             // Tb_Namakaryawan
             // 
-            Tb_Namakaryawan.Location = new Point(610, 112);
+            Tb_Namakaryawan.Location = new Point(595, 112);
             Tb_Namakaryawan.Multiline = true;
             Tb_Namakaryawan.Name = "Tb_Namakaryawan";
             Tb_Namakaryawan.PlaceholderText = "Cari nama Karyawan";
@@ -105,11 +106,11 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, namaDataGridViewTextBoxColumn, levelDataGridViewTextBoxColumn, noTelpDataGridViewTextBoxColumn, alamatDataGridViewTextBoxColumn, usernameDataGridViewTextBoxColumn, passwordDataGridViewTextBoxColumn });
             dataGridView1.DataSource = userBindingSource;
-            dataGridView1.Location = new Point(217, 151);
+            dataGridView1.Location = new Point(202, 151);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(778, 397);
+            dataGridView1.Size = new Size(793, 397);
             dataGridView1.TabIndex = 10;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
@@ -184,7 +185,7 @@
             // 
             tambahkaryawan_bt.BackColor = Color.Honeydew;
             tambahkaryawan_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            tambahkaryawan_bt.Location = new Point(217, 112);
+            tambahkaryawan_bt.Location = new Point(202, 112);
             tambahkaryawan_bt.Name = "tambahkaryawan_bt";
             tambahkaryawan_bt.Size = new Size(125, 33);
             tambahkaryawan_bt.TabIndex = 12;

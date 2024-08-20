@@ -29,7 +29,18 @@ namespace Cashier.Pages
 
         private void carikaryawan_bt_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty(Tb_Namakaryawan.Text))
+            {
+                Rdatauser();
+            }
+            else
+            {
+                string textsearch = Tb_Namakaryawan.Text.ToLower();
+                userBindingSource.DataSource = Program.db.Users
+                    .Where(x => x.Nama.ToLower().Contains(textsearch))
+                    .ToList();
+                Tb_Namakaryawan.Text = string.Empty;
+            }
         }
 
         private void Karyawan_Load(object sender, EventArgs e)
@@ -61,14 +72,32 @@ namespace Cashier.Pages
 
         private void ubahkaryawan_bt_Click(object sender, EventArgs e)
         {
-            if (selectedRow != null) 
+            if (selectedUser != null)
             {
-                EditUsersData edituser = new EditUsersData(this);
+                EditUsersData edituser = new EditUsersData(selectedUser, this);
                 edituser.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Tolong Pilih data yang ingin di rubah dulu");
+            }
+        }
+
+        private void hapusbarang_bt_Click(object sender, EventArgs e)
+        {
+            if (selectedUser != null)
+            {
+                DialogResult result = MessageBox.Show("Apakah anda yakin?", "Silahkan konfirmasi", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    Program.db.Users.Remove(selectedUser);
+                    Program.db.SaveChanges();
+                    Rdatauser();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tolong pilih Kolom yang ingin di hapus!");
             }
         }
     }
