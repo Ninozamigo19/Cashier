@@ -100,5 +100,14 @@ namespace Cashier.Pages
                 MessageBox.Show("Tolong pilih Kolom yang ingin di hapus!");
             }
         }
+
+        private void Tb_namakaryawan_KeyUp(object sender, KeyEventArgs e)
+        {
+            string textsearch = Tb_Namakaryawan.Text.ToLower();
+            userBindingSource.DataSource = Program.db.Users
+                .Where(x => x.Nama.ToLower().Contains(textsearch))
+                .ToList();
+            //Tb_Namakaryawan.Text = string.Empty;
+        }
     }
 }

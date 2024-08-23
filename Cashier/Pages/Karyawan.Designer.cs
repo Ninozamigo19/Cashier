@@ -97,6 +97,7 @@
             Tb_Namakaryawan.ScrollBars = ScrollBars.Horizontal;
             Tb_Namakaryawan.Size = new Size(286, 33);
             Tb_Namakaryawan.TabIndex = 11;
+            Tb_Namakaryawan.KeyUp += Tb_namakaryawan_KeyUp;
             // 
             // dataGridView1
             // 

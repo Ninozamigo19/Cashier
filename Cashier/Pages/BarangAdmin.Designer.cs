@@ -34,15 +34,15 @@
             kembali_bt = new Button();
             tambahbarang_bt = new Button();
             dataGridView1 = new DataGridView();
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            namaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            hargaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            jumlahDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productBindingSource = new BindingSource(components);
             Tb_Caribarang = new TextBox();
             ubahbarang_bt = new Button();
             caribarang_bt = new Button();
             hapusbarang_bt = new Button();
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            namaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            hargaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            jumlahDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             label1 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -105,57 +105,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(778, 397);
             dataGridView1.TabIndex = 2;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // productBindingSource
-            // 
-            productBindingSource.DataSource = typeof(Model.Product);
-            // 
-            // Tb_Caribarang
-            // 
-            Tb_Caribarang.Location = new Point(596, 112);
-            Tb_Caribarang.Multiline = true;
-            Tb_Caribarang.Name = "Tb_Caribarang";
-            Tb_Caribarang.PlaceholderText = "Cari nama barang";
-            Tb_Caribarang.Size = new Size(286, 33);
-            Tb_Caribarang.TabIndex = 3;
-            Tb_Caribarang.TextChanged += textBox1_TextChanged;
-            // 
-            // ubahbarang_bt
-            // 
-            ubahbarang_bt.BackColor = Color.Honeydew;
-            ubahbarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ubahbarang_bt.Location = new Point(334, 112);
-            ubahbarang_bt.Name = "ubahbarang_bt";
-            ubahbarang_bt.Size = new Size(125, 33);
-            ubahbarang_bt.TabIndex = 6;
-            ubahbarang_bt.Text = "Ubah";
-            ubahbarang_bt.UseVisualStyleBackColor = false;
-            ubahbarang_bt.Click += ubahbarang_bt_Click;
-            // 
-            // caribarang_bt
-            // 
-            caribarang_bt.BackColor = Color.Honeydew;
-            caribarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            caribarang_bt.Location = new Point(886, 112);
-            caribarang_bt.Name = "caribarang_bt";
-            caribarang_bt.Size = new Size(95, 33);
-            caribarang_bt.TabIndex = 7;
-            caribarang_bt.Text = "Cari";
-            caribarang_bt.UseVisualStyleBackColor = false;
-            caribarang_bt.Click += caribarang_bt_Click;
-            // 
-            // hapusbarang_bt
-            // 
-            hapusbarang_bt.BackColor = Color.Honeydew;
-            hapusbarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            hapusbarang_bt.Location = new Point(465, 112);
-            hapusbarang_bt.Name = "hapusbarang_bt";
-            hapusbarang_bt.Size = new Size(125, 33);
-            hapusbarang_bt.TabIndex = 8;
-            hapusbarang_bt.Text = "Hapus";
-            hapusbarang_bt.UseVisualStyleBackColor = false;
-            hapusbarang_bt.Click += hapusbarang_bt_Click;
+            dataGridView1.CellClick += dataGridView1_Click;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -193,15 +143,66 @@
             jumlahDataGridViewTextBoxColumn.ReadOnly = true;
             jumlahDataGridViewTextBoxColumn.Width = 175;
             // 
+            // productBindingSource
+            // 
+            productBindingSource.DataSource = typeof(Model.Product);
+            // 
+            // Tb_Caribarang
+            // 
+            Tb_Caribarang.Location = new Point(596, 112);
+            Tb_Caribarang.Multiline = true;
+            Tb_Caribarang.Name = "Tb_Caribarang";
+            Tb_Caribarang.PlaceholderText = "Cari nama produk";
+            Tb_Caribarang.Size = new Size(286, 33);
+            Tb_Caribarang.TabIndex = 3;
+            Tb_Caribarang.KeyUp += Tb_Caribarang_KeyUp;
+            // 
+            // ubahbarang_bt
+            // 
+            ubahbarang_bt.BackColor = Color.Honeydew;
+            ubahbarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ubahbarang_bt.Location = new Point(334, 112);
+            ubahbarang_bt.Name = "ubahbarang_bt";
+            ubahbarang_bt.Size = new Size(125, 33);
+            ubahbarang_bt.TabIndex = 6;
+            ubahbarang_bt.Text = "Ubah";
+            ubahbarang_bt.UseVisualStyleBackColor = false;
+            ubahbarang_bt.Click += ubahbarang_bt_Click;
+            // 
+            // caribarang_bt
+            // 
+            caribarang_bt.BackColor = Color.Honeydew;
+            caribarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            caribarang_bt.Location = new Point(886, 112);
+            caribarang_bt.Name = "caribarang_bt";
+            caribarang_bt.Size = new Size(95, 33);
+            caribarang_bt.TabIndex = 7;
+            caribarang_bt.Text = "Cari";
+            caribarang_bt.UseVisualStyleBackColor = false;
+            caribarang_bt.Click += caribarang_bt_Click;
+            // 
+            // hapusbarang_bt
+            // 
+            hapusbarang_bt.BackColor = Color.Honeydew;
+            hapusbarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            hapusbarang_bt.Location = new Point(465, 112);
+            hapusbarang_bt.Name = "hapusbarang_bt";
+            hapusbarang_bt.Size = new Size(125, 33);
+            hapusbarang_bt.TabIndex = 8;
+            hapusbarang_bt.Text = "Hapus";
+            hapusbarang_bt.UseVisualStyleBackColor = false;
+            hapusbarang_bt.Click += hapusbarang_bt_Click;
+            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(203, 1);
             label1.Name = "label1";
-            label1.Size = new Size(312, 54);
+            label1.Size = new Size(260, 54);
             label1.TabIndex = 17;
-            label1.Text = "Data Karyawan";
+            label1.Text = "Data Produk";
+            label1.Click += label1_Click;
             // 
             // BarangAdmin
             // 

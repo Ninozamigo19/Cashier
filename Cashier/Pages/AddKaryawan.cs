@@ -57,10 +57,15 @@ namespace Cashier.Pages
         private void batal_bt_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Pembaruan belum tersimpan", "Apakah Anda yakin ingin membatalkan nya?", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes) 
+            if (result == DialogResult.Yes)
             {
                 this.Close();
             }
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

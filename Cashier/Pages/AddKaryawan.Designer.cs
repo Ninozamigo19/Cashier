@@ -182,6 +182,7 @@
             label7.Size = new Size(264, 41);
             label7.TabIndex = 14;
             label7.Text = "Tambah Pengguna";
+            label7.Click += label7_Click;
             // 
             // levelBox
             // 

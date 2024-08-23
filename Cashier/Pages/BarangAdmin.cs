@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cashier.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,28 +13,34 @@ namespace Cashier.Pages
 {
     public partial class BarangAdmin : Form
     {
+        private Product selectedProduct;
+        private DataGridViewRow selectedRow;
+        public void RdataProduct()
+        {
+            productBindingSource.DataSource = Program.db.Products.ToList();
+        }
         public BarangAdmin()
         {
             InitializeComponent();
             productBindingSource.DataSource = Program.db.Products.ToList();
+            RdataProduct();
+        }
+        private void dataGridView1_Click(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                selectedRow = dataGridView1.Rows[e.RowIndex];
+                selectedProduct = (Product)selectedRow.DataBoundItem;
+
+            }
         }
 
         private void tambahbarang_bt_Click(object sender, EventArgs e)
         {
-
+            AddBarang tambah = new AddBarang(this);
+            tambah.ShowDialog();
         }
 
-        private void kembali_bt_Click(object sender, EventArgs e)
-        {
-            BerandaAdmin admin = new BerandaAdmin();
-            admin.Show();
-            this.Close();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void caribarang_bt_Click(object sender, EventArgs e)
         {
@@ -42,17 +49,54 @@ namespace Cashier.Pages
 
         private void hapusbarang_bt_Click(object sender, EventArgs e)
         {
-
+            if (selectedProduct != null)
+            {
+                DialogResult result = MessageBox.Show("Apakah anda yakin?", "Silahkan Konfirmasi", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    Program.db.Products.Remove(selectedProduct);
+                    Program.db.SaveChanges();
+                    RdataProduct();
+                }
+            }
+            else
+            {
+                MessageBox.Show("olong pilih produk yang ingin di hapus");
+            }
         }
 
         private void ubahbarang_bt_Click(object sender, EventArgs e)
         {
+            if (selectedProduct != null)
+            {
+                EditBarang edit = new EditBarang();
+                edit.ShowDialog();
+                RdataProduct();
+            }
+            else
+            {
+                MessageBox.Show("Tolong pilih produk yang ingin di ubah");
+            }
+        }
+        private void kembali_bt_Click(object sender, EventArgs e)
+        {
+            BerandaAdmin admin = new BerandaAdmin();
+            admin.Show();
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void Tb_Caribarang_KeyUp(object sender, KeyEventArgs e)
         {
-            
+            string textsearch = Tb_Caribarang.Text.ToLower();
+            productBindingSource.DataSource = Program.db.Products
+                .Where(x => x.Nama.ToLower().Contains(textsearch))
+                .ToList();
         }
     }
 }
