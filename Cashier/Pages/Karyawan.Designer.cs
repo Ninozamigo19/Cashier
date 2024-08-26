@@ -34,6 +34,12 @@
             ubahkaryawan_bt = new Button();
             Tb_Namakaryawan = new TextBox();
             dataGridView1 = new DataGridView();
+            userBindingSource = new BindingSource(components);
+            tambahkaryawan_bt = new Button();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            kembali_bt = new Button();
+            label1 = new Label();
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             namaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             levelDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -41,12 +47,6 @@
             alamatDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             usernameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             passwordDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            userBindingSource = new BindingSource(components);
-            tambahkaryawan_bt = new Button();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            kembali_bt = new Button();
-            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)userBindingSource).BeginInit();
             panel1.SuspendLayout();
@@ -104,79 +104,18 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, namaDataGridViewTextBoxColumn, levelDataGridViewTextBoxColumn, noTelpDataGridViewTextBoxColumn, alamatDataGridViewTextBoxColumn, usernameDataGridViewTextBoxColumn, passwordDataGridViewTextBoxColumn });
             dataGridView1.DataSource = userBindingSource;
             dataGridView1.Location = new Point(202, 151);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(793, 397);
             dataGridView1.TabIndex = 10;
             dataGridView1.CellClick += dataGridView1_CellClick;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn.HeaderText = "Id";
-            idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            idDataGridViewTextBoxColumn.ReadOnly = true;
-            idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // namaDataGridViewTextBoxColumn
-            // 
-            namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
-            namaDataGridViewTextBoxColumn.HeaderText = "Nama";
-            namaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
-            namaDataGridViewTextBoxColumn.ReadOnly = true;
-            namaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // levelDataGridViewTextBoxColumn
-            // 
-            levelDataGridViewTextBoxColumn.DataPropertyName = "Level";
-            levelDataGridViewTextBoxColumn.HeaderText = "Level";
-            levelDataGridViewTextBoxColumn.MinimumWidth = 6;
-            levelDataGridViewTextBoxColumn.Name = "levelDataGridViewTextBoxColumn";
-            levelDataGridViewTextBoxColumn.ReadOnly = true;
-            levelDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // noTelpDataGridViewTextBoxColumn
-            // 
-            noTelpDataGridViewTextBoxColumn.DataPropertyName = "No_Telp";
-            noTelpDataGridViewTextBoxColumn.HeaderText = "No_Telp";
-            noTelpDataGridViewTextBoxColumn.MinimumWidth = 6;
-            noTelpDataGridViewTextBoxColumn.Name = "noTelpDataGridViewTextBoxColumn";
-            noTelpDataGridViewTextBoxColumn.ReadOnly = true;
-            noTelpDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // alamatDataGridViewTextBoxColumn
-            // 
-            alamatDataGridViewTextBoxColumn.DataPropertyName = "Alamat";
-            alamatDataGridViewTextBoxColumn.HeaderText = "Alamat";
-            alamatDataGridViewTextBoxColumn.MinimumWidth = 6;
-            alamatDataGridViewTextBoxColumn.Name = "alamatDataGridViewTextBoxColumn";
-            alamatDataGridViewTextBoxColumn.ReadOnly = true;
-            alamatDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            usernameDataGridViewTextBoxColumn.ReadOnly = true;
-            usernameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
-            passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            passwordDataGridViewTextBoxColumn.ReadOnly = true;
-            passwordDataGridViewTextBoxColumn.Width = 125;
             // 
             // userBindingSource
             // 
@@ -234,6 +173,69 @@
             label1.TabIndex = 16;
             label1.Text = "Data Karyawan";
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn.FillWeight = 41.17647F;
+            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // namaDataGridViewTextBoxColumn
+            // 
+            namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
+            namaDataGridViewTextBoxColumn.FillWeight = 109.803917F;
+            namaDataGridViewTextBoxColumn.HeaderText = "Nama";
+            namaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
+            namaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // levelDataGridViewTextBoxColumn
+            // 
+            levelDataGridViewTextBoxColumn.DataPropertyName = "Level";
+            levelDataGridViewTextBoxColumn.FillWeight = 109.803917F;
+            levelDataGridViewTextBoxColumn.HeaderText = "Level";
+            levelDataGridViewTextBoxColumn.MinimumWidth = 6;
+            levelDataGridViewTextBoxColumn.Name = "levelDataGridViewTextBoxColumn";
+            levelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // noTelpDataGridViewTextBoxColumn
+            // 
+            noTelpDataGridViewTextBoxColumn.DataPropertyName = "No_Telp";
+            noTelpDataGridViewTextBoxColumn.FillWeight = 109.803917F;
+            noTelpDataGridViewTextBoxColumn.HeaderText = "No_Telp";
+            noTelpDataGridViewTextBoxColumn.MinimumWidth = 6;
+            noTelpDataGridViewTextBoxColumn.Name = "noTelpDataGridViewTextBoxColumn";
+            noTelpDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // alamatDataGridViewTextBoxColumn
+            // 
+            alamatDataGridViewTextBoxColumn.DataPropertyName = "Alamat";
+            alamatDataGridViewTextBoxColumn.FillWeight = 109.803917F;
+            alamatDataGridViewTextBoxColumn.HeaderText = "Alamat";
+            alamatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            alamatDataGridViewTextBoxColumn.Name = "alamatDataGridViewTextBoxColumn";
+            alamatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
+            usernameDataGridViewTextBoxColumn.FillWeight = 109.803917F;
+            usernameDataGridViewTextBoxColumn.HeaderText = "Username";
+            usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            usernameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            passwordDataGridViewTextBoxColumn.FillWeight = 109.803917F;
+            passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
+            passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Karyawan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -269,6 +271,8 @@
         private Panel panel1;
         private Panel panel2;
         private Button kembali_bt;
+        private BindingSource userBindingSource;
+        private Label label1;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn levelDataGridViewTextBoxColumn;
@@ -276,7 +280,5 @@
         private DataGridViewTextBoxColumn alamatDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private BindingSource userBindingSource;
-        private Label label1;
     }
 }

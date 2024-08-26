@@ -34,16 +34,16 @@
             kembali_bt = new Button();
             tambahbarang_bt = new Button();
             dataGridView1 = new DataGridView();
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            namaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            hargaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            jumlahDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productBindingSource = new BindingSource(components);
             Tb_Caribarang = new TextBox();
             ubahbarang_bt = new Button();
             caribarang_bt = new Button();
             hapusbarang_bt = new Button();
             label1 = new Label();
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            namaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            hargaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            jumlahDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
@@ -96,52 +96,18 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, namaDataGridViewTextBoxColumn, hargaDataGridViewTextBoxColumn, jumlahDataGridViewTextBoxColumn });
             dataGridView1.DataSource = productBindingSource;
             dataGridView1.Location = new Point(203, 151);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(778, 397);
             dataGridView1.TabIndex = 2;
             dataGridView1.CellClick += dataGridView1_Click;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn.HeaderText = "Id";
-            idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            idDataGridViewTextBoxColumn.ReadOnly = true;
-            idDataGridViewTextBoxColumn.Width = 170;
-            // 
-            // namaDataGridViewTextBoxColumn
-            // 
-            namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
-            namaDataGridViewTextBoxColumn.HeaderText = "Nama";
-            namaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
-            namaDataGridViewTextBoxColumn.ReadOnly = true;
-            namaDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // hargaDataGridViewTextBoxColumn
-            // 
-            hargaDataGridViewTextBoxColumn.DataPropertyName = "Harga";
-            hargaDataGridViewTextBoxColumn.HeaderText = "Harga";
-            hargaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            hargaDataGridViewTextBoxColumn.Name = "hargaDataGridViewTextBoxColumn";
-            hargaDataGridViewTextBoxColumn.ReadOnly = true;
-            hargaDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // jumlahDataGridViewTextBoxColumn
-            // 
-            jumlahDataGridViewTextBoxColumn.DataPropertyName = "Jumlah";
-            jumlahDataGridViewTextBoxColumn.HeaderText = "Jumlah";
-            jumlahDataGridViewTextBoxColumn.MinimumWidth = 6;
-            jumlahDataGridViewTextBoxColumn.Name = "jumlahDataGridViewTextBoxColumn";
-            jumlahDataGridViewTextBoxColumn.ReadOnly = true;
-            jumlahDataGridViewTextBoxColumn.Width = 175;
             // 
             // productBindingSource
             // 
@@ -204,6 +170,42 @@
             label1.Text = "Data Produk";
             label1.Click += label1_Click;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn.FillWeight = 23.5294113F;
+            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // namaDataGridViewTextBoxColumn
+            // 
+            namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
+            namaDataGridViewTextBoxColumn.FillWeight = 125.4902F;
+            namaDataGridViewTextBoxColumn.HeaderText = "Nama";
+            namaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
+            namaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hargaDataGridViewTextBoxColumn
+            // 
+            hargaDataGridViewTextBoxColumn.DataPropertyName = "Harga";
+            hargaDataGridViewTextBoxColumn.FillWeight = 125.4902F;
+            hargaDataGridViewTextBoxColumn.HeaderText = "Harga";
+            hargaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            hargaDataGridViewTextBoxColumn.Name = "hargaDataGridViewTextBoxColumn";
+            hargaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // jumlahDataGridViewTextBoxColumn
+            // 
+            jumlahDataGridViewTextBoxColumn.DataPropertyName = "Jumlah";
+            jumlahDataGridViewTextBoxColumn.FillWeight = 125.4902F;
+            jumlahDataGridViewTextBoxColumn.HeaderText = "Jumlah";
+            jumlahDataGridViewTextBoxColumn.MinimumWidth = 6;
+            jumlahDataGridViewTextBoxColumn.Name = "jumlahDataGridViewTextBoxColumn";
+            jumlahDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // BarangAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -243,10 +245,10 @@
         private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;
+        private Label label1;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn hargaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn jumlahDataGridViewTextBoxColumn;
-        private Label label1;
     }
 }

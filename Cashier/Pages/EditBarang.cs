@@ -16,11 +16,7 @@ namespace Cashier.Pages
         private Product product;
         private BarangAdmin barangadminForm;
 
-        public EditBarang()
-        {
-        }
-
-        public EditBarang(BarangAdmin admin, Product produk)
+        public EditBarang(Product produk, BarangAdmin admin)
         {
             InitializeComponent();
             this.product = produk;

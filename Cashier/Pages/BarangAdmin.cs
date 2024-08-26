@@ -13,7 +13,7 @@ namespace Cashier.Pages
 {
     public partial class BarangAdmin : Form
     {
-        private Product selectedProduct;
+        public Product selectedProduct;
         private DataGridViewRow selectedRow;
         public void RdataProduct()
         {
@@ -61,7 +61,7 @@ namespace Cashier.Pages
             }
             else
             {
-                MessageBox.Show("olong pilih produk yang ingin di hapus");
+                MessageBox.Show("Tolong pilih produk yang ingin di hapus");
             }
         }
 
@@ -69,7 +69,7 @@ namespace Cashier.Pages
         {
             if (selectedProduct != null)
             {
-                EditBarang edit = new EditBarang();
+                EditBarang edit = new EditBarang(selectedProduct, this);
                 edit.ShowDialog();
                 RdataProduct();
             }
