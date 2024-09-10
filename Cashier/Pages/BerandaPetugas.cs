@@ -39,14 +39,15 @@ namespace Cashier.Pages
 
         }
 
-        private void tambahbarang_bt_Click(object sender, EventArgs e)
+        private void hapusbarang_bt_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void hapusbarang_bt_Click(object sender, EventArgs e)
+        private void pilihproduk_bt_Click(object sender, EventArgs e)
         {
-
+            PilihProduk pindah = new PilihProduk();
+            pindah.ShowDialog();
         }
     }
 }

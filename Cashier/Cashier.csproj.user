@@ -28,5 +28,8 @@
     <Compile Update="Pages\Karyawan.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Pages\PilihProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

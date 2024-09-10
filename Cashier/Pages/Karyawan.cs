@@ -109,5 +109,10 @@ namespace Cashier.Pages
                 .ToList();
             //Tb_Namakaryawan.Text = string.Empty;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panel1 = new Panel();
             panel2 = new Panel();
             logout_bt = new Button();
             profile_bt = new Button();
             dataGridView1 = new DataGridView();
+            saleBindingSource = new BindingSource(components);
             panel3 = new Panel();
             label4 = new Label();
             Tb_Kembalian = new TextBox();
@@ -43,10 +45,14 @@
             label1 = new Label();
             Tb_TotalHarga = new TextBox();
             bayar_bt = new Button();
-            tambahbarang_bt = new Button();
+            pilihproduk_bt = new Button();
             hapusbarang_bt = new Button();
+            produk = new DataGridViewTextBoxColumn();
+            jumlah = new DataGridViewTextBoxColumn();
+            harga = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)saleBindingSource).BeginInit();
             panel3.SuspendLayout();
             SuspendLayout();
             // 
@@ -95,12 +101,22 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { produk, jumlah, harga });
             dataGridView1.Location = new Point(207, 88);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(480, 415);
+            dataGridView1.Size = new Size(488, 415);
             dataGridView1.TabIndex = 2;
+            // 
+            // saleBindingSource
+            // 
+            saleBindingSource.DataSource = typeof(Model.Sale);
             // 
             // panel3
             // 
@@ -204,29 +220,50 @@
             bayar_bt.Text = "Bayar";
             bayar_bt.UseVisualStyleBackColor = false;
             // 
-            // tambahbarang_bt
+            // pilihproduk_bt
             // 
-            tambahbarang_bt.BackColor = Color.Honeydew;
-            tambahbarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            tambahbarang_bt.Location = new Point(207, 31);
-            tambahbarang_bt.Name = "tambahbarang_bt";
-            tambahbarang_bt.Size = new Size(126, 48);
-            tambahbarang_bt.TabIndex = 6;
-            tambahbarang_bt.Text = "Tambah";
-            tambahbarang_bt.UseVisualStyleBackColor = false;
-            tambahbarang_bt.Click += tambahbarang_bt_Click;
+            pilihproduk_bt.BackColor = Color.Honeydew;
+            pilihproduk_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            pilihproduk_bt.Location = new Point(207, 31);
+            pilihproduk_bt.Name = "pilihproduk_bt";
+            pilihproduk_bt.Size = new Size(131, 48);
+            pilihproduk_bt.TabIndex = 6;
+            pilihproduk_bt.Text = "Pilih Produk";
+            pilihproduk_bt.UseVisualStyleBackColor = false;
+            pilihproduk_bt.Click += pilihproduk_bt_Click;
             // 
             // hapusbarang_bt
             // 
             hapusbarang_bt.BackColor = Color.Honeydew;
             hapusbarang_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            hapusbarang_bt.Location = new Point(339, 31);
+            hapusbarang_bt.Location = new Point(344, 31);
             hapusbarang_bt.Name = "hapusbarang_bt";
-            hapusbarang_bt.Size = new Size(126, 48);
+            hapusbarang_bt.Size = new Size(142, 48);
             hapusbarang_bt.TabIndex = 7;
-            hapusbarang_bt.Text = "Hapus";
+            hapusbarang_bt.Text = "Hapus Produk";
             hapusbarang_bt.UseVisualStyleBackColor = false;
             hapusbarang_bt.Click += hapusbarang_bt_Click;
+            // 
+            // produk
+            // 
+            produk.HeaderText = "Produk";
+            produk.MinimumWidth = 6;
+            produk.Name = "produk";
+            produk.ReadOnly = true;
+            // 
+            // jumlah
+            // 
+            jumlah.HeaderText = "Jumlah";
+            jumlah.MinimumWidth = 6;
+            jumlah.Name = "jumlah";
+            jumlah.ReadOnly = true;
+            // 
+            // harga
+            // 
+            harga.HeaderText = "Harga";
+            harga.MinimumWidth = 6;
+            harga.Name = "harga";
+            harga.ReadOnly = true;
             // 
             // BerandaPetugas
             // 
@@ -235,7 +272,7 @@
             BackColor = Color.SkyBlue;
             ClientSize = new Size(1007, 560);
             Controls.Add(hapusbarang_bt);
-            Controls.Add(tambahbarang_bt);
+            Controls.Add(pilihproduk_bt);
             Controls.Add(panel3);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
@@ -243,6 +280,7 @@
             Text = "BerandaPetugas";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)saleBindingSource).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ResumeLayout(false);
@@ -265,7 +303,11 @@
         private TextBox Tb_JumlahUang;
         private Label label4;
         private TextBox Tb_Kembalian;
-        private Button tambahbarang_bt;
+        private Button pilihproduk_bt;
         private Button hapusbarang_bt;
+        private BindingSource saleBindingSource;
+        private DataGridViewTextBoxColumn produk;
+        private DataGridViewTextBoxColumn jumlah;
+        private DataGridViewTextBoxColumn harga;
     }
 }

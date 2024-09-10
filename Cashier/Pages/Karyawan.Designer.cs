@@ -34,12 +34,6 @@
             ubahkaryawan_bt = new Button();
             Tb_Namakaryawan = new TextBox();
             dataGridView1 = new DataGridView();
-            userBindingSource = new BindingSource(components);
-            tambahkaryawan_bt = new Button();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            kembali_bt = new Button();
-            label1 = new Label();
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             namaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             levelDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -47,6 +41,12 @@
             alamatDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             usernameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             passwordDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            userBindingSource = new BindingSource(components);
+            tambahkaryawan_bt = new Button();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            kembali_bt = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)userBindingSource).BeginInit();
             panel1.SuspendLayout();
@@ -116,62 +116,7 @@
             dataGridView1.Size = new Size(793, 397);
             dataGridView1.TabIndex = 10;
             dataGridView1.CellClick += dataGridView1_CellClick;
-            // 
-            // userBindingSource
-            // 
-            userBindingSource.DataSource = typeof(Model.User);
-            // 
-            // tambahkaryawan_bt
-            // 
-            tambahkaryawan_bt.BackColor = Color.Honeydew;
-            tambahkaryawan_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            tambahkaryawan_bt.Location = new Point(202, 112);
-            tambahkaryawan_bt.Name = "tambahkaryawan_bt";
-            tambahkaryawan_bt.Size = new Size(125, 33);
-            tambahkaryawan_bt.TabIndex = 12;
-            tambahkaryawan_bt.Text = "Tambah Data";
-            tambahkaryawan_bt.UseVisualStyleBackColor = false;
-            tambahkaryawan_bt.Click += tambahkaryawan_bt_Click;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.AppWorkspace;
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(kembali_bt);
-            panel1.Location = new Point(1, 1);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(183, 612);
-            panel1.TabIndex = 9;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.Red;
-            panel2.Location = new Point(0, 68);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(183, 39);
-            panel2.TabIndex = 1;
-            // 
-            // kembali_bt
-            // 
-            kembali_bt.BackColor = Color.Honeydew;
-            kembali_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            kembali_bt.Location = new Point(27, 473);
-            kembali_bt.Name = "kembali_bt";
-            kembali_bt.Size = new Size(126, 60);
-            kembali_bt.TabIndex = 5;
-            kembali_bt.Text = "Kembali";
-            kembali_bt.UseVisualStyleBackColor = false;
-            kembali_bt.Click += kembali_bt_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(217, 1);
-            label1.Name = "label1";
-            label1.Size = new Size(312, 54);
-            label1.TabIndex = 16;
-            label1.Text = "Data Karyawan";
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -235,6 +180,62 @@
             passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
             passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
             passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userBindingSource
+            // 
+            userBindingSource.DataSource = typeof(Model.User);
+            // 
+            // tambahkaryawan_bt
+            // 
+            tambahkaryawan_bt.BackColor = Color.Honeydew;
+            tambahkaryawan_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            tambahkaryawan_bt.Location = new Point(202, 112);
+            tambahkaryawan_bt.Name = "tambahkaryawan_bt";
+            tambahkaryawan_bt.Size = new Size(125, 33);
+            tambahkaryawan_bt.TabIndex = 12;
+            tambahkaryawan_bt.Text = "Tambah Data";
+            tambahkaryawan_bt.UseVisualStyleBackColor = false;
+            tambahkaryawan_bt.Click += tambahkaryawan_bt_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.AppWorkspace;
+            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(kembali_bt);
+            panel1.Location = new Point(1, 1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(183, 612);
+            panel1.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Red;
+            panel2.Location = new Point(0, 68);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(183, 39);
+            panel2.TabIndex = 1;
+            // 
+            // kembali_bt
+            // 
+            kembali_bt.BackColor = Color.Honeydew;
+            kembali_bt.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kembali_bt.Location = new Point(27, 473);
+            kembali_bt.Name = "kembali_bt";
+            kembali_bt.Size = new Size(126, 60);
+            kembali_bt.TabIndex = 5;
+            kembali_bt.Text = "Kembali";
+            kembali_bt.UseVisualStyleBackColor = false;
+            kembali_bt.Click += kembali_bt_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(217, 1);
+            label1.Name = "label1";
+            label1.Size = new Size(312, 54);
+            label1.TabIndex = 16;
+            label1.Text = "Data Karyawan";
             // 
             // Karyawan
             // 
